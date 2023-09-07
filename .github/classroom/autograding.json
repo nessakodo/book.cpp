@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "name": "getters_test",
+      "setup": "",
+      "run": "make run_getter_test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "setters_test",
+      "setup": "",
+      "run": "make run_setter_test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "estimatedWeight_test",
+      "setup": "",
+      "run": "make run_weight_test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "mainRunner_test",
+      "setup": "",
+      "run": "make run_main_test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 25
+    },
+    {
+      "name": "Valid Getter Test",
+      "setup": "",
+      "run": "test $(md5sum tests/getters_test.cpp | cut -f1 -d\" \") = 'b80c975fd1737ef89edb9ce7384b2f5b'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1000
+    },
+    {
+      "name": "Valid Setter Test",
+      "setup": "",
+      "run": "test $(md5sum tests/setters_test.cpp | cut -f1 -d\" \") = 'd5173ef52fd2dcaedc41620424118a3a'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1000
+    },
+    {
+      "name": "Valid Estimated Weight Test",
+      "setup": "",
+      "run": "test $(md5sum tests/estimatedWeight_test.cpp | cut -f1 -d\" \") = 'd914db629ef9c5f08bb54c8b2f5fef21'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1000
+    },
+    {
+      "name": "Valid Main Test",
+      "setup": "",
+      "run": "test $(md5sum tests/mainRunner_test.cpp | cut -f1 -d\" \") = '3cc08f03ddf2b3736d985038e75bad69'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1000
+    },
+    {
+      "name": "Valid Imports",
+      "setup": "",
+      "run": "grep import src/*cpp | egrep -v '<cmath>|<iostream>|\"Book.h\"|<string>'; test $? -eq 1",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1000
+    }
+  ]
+}
