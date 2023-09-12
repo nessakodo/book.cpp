@@ -1,5 +1,6 @@
 #include "Book.h"
 #include <iostream>
+#include <iomanip>
 
 // Constructor
 Book::Book(std::string title, int pubYear, int numOfPages)
@@ -32,18 +33,21 @@ void Book::setNumOfPages(int aNumOfPages) {
     numOfPages = aNumOfPages;
 }
 
-// Estimated book weight
+// Estimated book weight method
 float Book::estimatedBookWeight() const {
-    return 0.176f * float(numOfPages);
+    float weight = 0.176f * float(numOfPages);
+    return weight; // Round to two decimal places
 }
+
+
 
 // Main function to read user input and display estimated book weight
 int mainRunner() {
     std::string title;
-    int pubYear;
-    int numOfPages;
+    int pubYear, numOfPages;
 
     std::cout << "Please input the title of the book: ";
+    std::cin.ignore();
     std::getline(std::cin, title);
 
     std::cout << "Input the publication year of the book: ";
