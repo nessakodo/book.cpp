@@ -40,10 +40,10 @@ float Book::estimatedBookWeight() const {
 // Main function to read user input and display estimated book weight
 int mainRunner() {
     std::string title;
-    int pubYear, numOfPages;
+    int pubYear;
+    int numOfPages;
 
     std::cout << "Please input the title of the book: ";
-    std::cin.ignore();
     std::getline(std::cin, title);
 
     std::cout << "Input the publication year of the book: ";
