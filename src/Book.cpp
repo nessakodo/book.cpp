@@ -33,10 +33,10 @@ void Book::setNumOfPages(int aNumOfPages) {
     numOfPages = aNumOfPages;
 }
 
-// Estimated book weight method
+// Estimated book weight
 float Book::estimatedBookWeight() const {
     float weight = 0.176f * float(numOfPages);
-    return weight; // Round to two decimal places
+    return weight;
 }
 
 
