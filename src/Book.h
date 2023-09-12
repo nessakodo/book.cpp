@@ -1,6 +1,12 @@
 #include <string>
 
 class Book {
+
+private:
+    std::string title;
+    int pubYear;
+    int numOfPages;
+
 public:
     // Constructor
     Book(std::string title, int pubYear, int numOfPages);
@@ -15,12 +21,8 @@ public:
     void setPubYear(int pubYear);
     void setNumOfPages(int numOfPages);
 
-    // Estimated book weight 
+    // Estimated book weight
     float estimatedBookWeight() const;
 
-private:
-    std::string title;
-    int pubYear;
-    int numOfPages;
 };
 
